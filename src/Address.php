@@ -5,6 +5,7 @@
  * Date: 2021/8/19
  * Time: 11:27
  */
+
 namespace adamyu1024\Filecoin;
 
 use deemru\Blake2b;
@@ -15,6 +16,16 @@ use Mdanter\Ecc\Serializer\PublicKey\DerPublicKeySerializer;
 
 class Address
 {
+
+    const MAINNET = 0;
+
+    const TESTNET = 1;
+
+    const MAINNETPREFIX = "f";
+
+    const TESTNETPREFIX = "t";
+
+    public $currentNetwork = self::MAINNET;
 
     public function __construct(string $privateKey = '')
     {
@@ -54,7 +65,8 @@ class Address
         $blake2b2 = new Blake2b(4);
         $checksum = bin2hex($blake2b2->hash(hex2bin($pubhash)));
         $hex_str = bin2hex($hash) . $checksum;
-        return strtolower(\SKleeschulte\Base32::encodeByteStr(hex2bin($hex_str), true));
+        $prefix = $this->currentNetwork == self::MAINNET ? self::MAINNETPREFIX : self::TESTNETPREFIX;
+        return $prefix . "1" . strtolower(\SKleeschulte\Base32::encodeByteStr(hex2bin($hex_str), true));
     }
 
     /**
