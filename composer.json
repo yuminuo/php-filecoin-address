@@ -1,0 +1,24 @@
+{
+    "name": "adamyu1024/filecoin-address",
+    "description": "Pure PHP Filecoin Address Generator / Validator",
+    "type": "library",
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.4",
+        "skleeschulte/base32": "^0.0.2",
+        "deemru/blake2b": "^1.0",
+        "mdanter/ecc": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "adamyu1024\\Filecoin\\": "src"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adam Yu",
+            "email": "adamyxt@outlook.com"
+        }
+    ]
+}

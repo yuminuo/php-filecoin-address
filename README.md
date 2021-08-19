@@ -1,2 +1,2 @@
-# php-filecoin-address
+# filecoin-address
 Pure PHP Filecoin Address Generator / Validator
