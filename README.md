@@ -23,7 +23,7 @@ $address->currentNetwork = Address::TESTNET;
 
 // get address
 $address->get();
-// hb4737umuzzbcfd3xxk3bdtwezgistj7dycypvi
+// t1hb4737umuzzbcfd3xxk3bdtwezgistj7dycypvi
 
 $address->getPrivateKey();
 // ee2868ca9485673b36c38ba4f18551be25d08dd9be9bd24c44cd626b37cadae4
@@ -42,6 +42,7 @@ require_once 'vendor/autoload.php';
 use adamyu1024\Filecoin\Address;
 
 $privateKey = 'ee2868ca9485673b36c38ba4f18551be25d08dd9be9bd24c44cd626b37cadae4';
+
 $address = new Address($privateKey);
 
 //setting network type
@@ -49,7 +50,7 @@ $address->currentNetwork = Address::TESTNET;
 
 // get address
 $address->get();
-// hb4737umuzzbcfd3xxk3bdtwezgistj7dycypvi
+// t1hb4737umuzzbcfd3xxk3bdtwezgistj7dycypvi
 
 $address->getPrivateKey();
 // ee2868ca9485673b36c38ba4f18551be25d08dd9be9bd24c44cd626b37cadae4
